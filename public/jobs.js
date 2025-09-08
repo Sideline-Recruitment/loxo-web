@@ -2,7 +2,7 @@ let jobId = '';
 
 const fetchJobs = async () => {
   try {
-    const response = await fetch('https://sideline-recruitment.vercel.app/api/jobs');
+    const response = await fetch('https://loxo-web.vercel.app/api/jobs');
     const data = await response.json();
     console.log('📦 Jobs response:', data);
     return Array.isArray(data.results) ? data.results : [];
@@ -14,7 +14,7 @@ const fetchJobs = async () => {
 
 const fetchJobDescription = async (jobId, element) => {
   try {
-    const res = await fetch(`https://sideline-recruitment.vercel.app/api/job?id=${jobId}`, {
+    const res = await fetch(`https://loxo-web.vercel.app/api/job?id=${jobId}`, {
       method: 'GET',
       headers: { accept: 'application/json' },
     });
@@ -191,7 +191,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         $(".button.job-apply-modal").val("Please Wait...").attr("disabled", true);
 
-        fetch("https://sideline-recruitment.vercel.app/api/apply", {
+        fetch("https://loxo-web.vercel.app/api/apply", {
           method: "POST",
           headers: { "JobId": jobId },
           body: form,
