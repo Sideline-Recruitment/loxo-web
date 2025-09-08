@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
       $('.submit-button-apply-job').val('Please Wait...').attr('disabled', true);
 
       try {
-        const res = await fetch('https://sideline-recruitment.vercel.app/api/apply', {
+        const res = await fetch('https://loxo-web.vercel.app/api/apply', {
           method: 'POST',
           headers: { accept: 'application/json', JobId: jobId },
           body: form,
