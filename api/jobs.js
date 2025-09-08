@@ -26,7 +26,7 @@ export default async function handler(req, res) {
 
   try {
     const response = await fetch(
-      'https://app.loxo.co/api/sideline-sports-recruitment/jobs?published_at_sort=desc&status=active&per_page=100',
+      'https://app.loxo.co/api/sideline-sports-recruitment/jobs?published_at_sort=desc&published=true&status=active&per_page=100',
       {
         method: 'GET',
         headers: {
