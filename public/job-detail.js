@@ -12,7 +12,7 @@ const fetchData = async () => {
   }
 
   try {
-    const response = await fetch(`https://sideline-recruitment.vercel.app/api/job?id=${jobId}`, {
+    const response = await fetch(`https://loxo-web.vercel.app/api/job?id=${jobId}`, {
       method: 'GET',
       headers: { accept: 'application/json' },
     });
